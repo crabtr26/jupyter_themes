@@ -9,16 +9,13 @@ These variables should be used by all plugins wherever possible. In other
 words, plugins should not define custom colors, sizes, etc unless absolutely
 necessary. This enables users to change the visual theme of JupyterLab
 by changing these variables.
-
 Many variables appear in an ordered sequence (0,1,2,3). These sequences
 are designed to work well together, so for example, `--jp-border-color1` should
 be used with `--jp-layout-color1`. The numbers have the following meanings:
-
 * 0: super-primary, reserved for special emphasis
 * 1: primary, most important under normal situations
 * 2: secondary, next most important under normal situations
 * 3: tertiary, next most important under normal situations
-
 Throughout JupyterLab, we are mostly following principles from Google's
 Material Design when selecting colors. We are not, however, following
 all of MD as it is not optimized for dense, information rich UIs.
@@ -87,11 +84,11 @@ all of MD as it is not optimized for dense, information rich UIs.
    */
 
   --jp-border-width: 1px;
-  --jp-border-color0: var(--md-grey-600);
-  --jp-border-color1: var(--md-grey-800);
-  --jp-border-color2: var(--md-grey-600);
-  --jp-border-color3: var(--md-grey-600);
-  --jp-border-radius: 2px;
+  --jp-border-color0: var(--md-grey-800);
+  --jp-border-color1: var(--md-grey-700);
+  --jp-border-color2: var(--md-grey-700);
+  --jp-border-color3: var(--md-grey-700);
+  --jp-border-radius: 10px;
 
   /* UI Fonts
    *
@@ -117,28 +114,21 @@ all of MD as it is not optimized for dense, information rich UIs.
    * In a light theme, these go from dark to light.
    */
 
-
   /* Defaults use Material Design specification */
-    
-/*   --jp-ui-font-color0: white;
-  --jp-ui-font-color1: cyan;
-  --jp-ui-font-color2: magenta;
-  --jp-ui-font-color3: yellow; */
-    
-  --jp-ui-font-color0: white;
-  --jp-ui-font-color1: white;
-  --jp-ui-font-color2: var(--md-grey-600);
-  --jp-ui-font-color3: var(--md-grey-600);
+  --jp-ui-font-color0: var(--md-grey-200);
+  --jp-ui-font-color1: var(--md-grey-200);
+  --jp-ui-font-color2: var(--md-grey-300);
+  --jp-ui-font-color3: var(--md-grey-400);
 
   /*
    * Use these against the brand/accent/warn/error colors.
    * These will typically go from light to darker, in both a dark and light theme.
    */
 
-  --jp-ui-inverse-font-color0: rgba(255, 255, 255, 0.38);
-  --jp-ui-inverse-font-color1: rgba(255, 255, 255, 0.54);
-  --jp-ui-inverse-font-color2: rgba(255, 255, 255, 0.87);;
-  --jp-ui-inverse-font-color3: rgba(255, 255, 255, 1);
+  --jp-ui-inverse-font-color0: rgba(0, 0, 0, 1);
+  --jp-ui-inverse-font-color1: rgba(0, 0, 0, 1);
+  --jp-ui-inverse-font-color2: rgba(0, 0, 0, 0.7);
+  --jp-ui-inverse-font-color3: rgba(0, 0, 0, 0.5);
 
   /* Content Fonts
    *
@@ -167,12 +157,6 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-content-heading-font-weight: 500;
 
   /* Defaults use Material Design specification */
-    
-/*   --jp-content-font-color0: white;
-  --jp-content-font-color1: cyan;
-  --jp-content-font-color2: magenta;
-  --jp-content-font-color3: yellow; */
-    
   --jp-content-font-color0: rgba(255, 255, 255, 1);
   --jp-content-font-color1: rgba(255, 255, 255, 0.87);
   --jp-content-font-color2: rgba(255, 255, 255, 0.54);
@@ -209,18 +193,12 @@ all of MD as it is not optimized for dense, information rich UIs.
    * The following are the main layout colors use in JupyterLab. In a light
    * theme these would go from light to dark.
    */
-   
-  --jp-layout-color0: rgba(12, 13, 17, 1);
-  --jp-layout-color1: rgba(24, 26, 35, 1);
-  --jp-layout-color2: rgba(48, 52, 69, 1);
-  --jp-layout-color3: rgba(48, 52, 69, 0.87);
-  --jp-layout-color4: rgba(48, 52, 69, 0.38);
-    
-/*   --jp-layout-color0: #111111;
-  --jp-layout-color1: var(--md-grey-900);
-  --jp-layout-color2: var(--md-grey-800);
-  --jp-layout-color3: var(--md-grey-700);
-  --jp-layout-color4: var(--md-grey-600); */
+
+  --jp-layout-color0: #121216;
+  --jp-layout-color1: #393a40;
+  --jp-layout-color2: #23242b;
+  --jp-layout-color3: #65666b;
+  --jp-layout-color4: #7b7c80;
 
   /* Inverse Layout
    *
@@ -228,26 +206,26 @@ all of MD as it is not optimized for dense, information rich UIs.
    * theme these would go from dark to light.
    */
     
-  --jp-inverse-layout-color0: white;
-  --jp-inverse-layout-color1: white;
-  --jp-inverse-layout-color2: var(--md-grey-200);
-  --jp-inverse-layout-color3: var(--md-grey-400);
-  --jp-inverse-layout-color4: var(--md-grey-600);
+  --jp-inverse-layout-color0: #e9e9ea;
+  --jp-inverse-layout-color1: #d3d3d5;
+  --jp-inverse-layout-color2: #bdbdbf;
+  --jp-inverse-layout-color3: #a7a7aa;
+  --jp-inverse-layout-color4: #919295;
 
   /* Brand/accent */
-
-  --jp-brand-color0: var(--md-blue-700);
-  --jp-brand-color1: var(--md-blue-500);
-  --jp-brand-color2: var(--md-blue-300);
-  --jp-brand-color3: var(--md-blue-100);
+    
+  --jp-brand-color0: #11334c;
+  --jp-brand-color1: #236699;
+  --jp-brand-color2: #3aaaff;
+  --jp-brand-color3: #61bbff;
 
   --jp-accent-color0: var(--md-green-700);
   --jp-accent-color1: var(--md-green-500);
   --jp-accent-color2: var(--md-green-300);
   --jp-accent-color3: var(--md-green-100);
-
+    
   /* State colors (warn, error, success, info) */
-
+    
   --jp-warn-color0: var(--md-orange-700);
   --jp-warn-color1: var(--md-orange-500);
   --jp-warn-color2: var(--md-orange-300);
@@ -257,12 +235,12 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-error-color1: var(--md-red-500);
   --jp-error-color2: var(--md-red-300);
   --jp-error-color3: var(--md-red-100);
-
+    
   --jp-success-color0: var(--md-green-700);
   --jp-success-color1: var(--md-green-500);
   --jp-success-color2: var(--md-green-300);
   --jp-success-color3: var(--md-green-100);
-
+    
   --jp-info-color0: var(--md-cyan-700);
   --jp-info-color1: var(--md-cyan-500);
   --jp-info-color2: var(--md-cyan-300);
@@ -276,10 +254,10 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-cell-collapser-min-height: 20px;
   --jp-cell-collapser-not-active-hover-opacity: 0.6;
 
-  --jp-cell-editor-background: rgba(24, 26, 35, 1);
-  --jp-cell-editor-border-color: var(--md-grey-300);
-  --jp-cell-editor-box-shadow: inset 0 0 2px rgba(24, 26, 35, 1);
-  --jp-cell-editor-active-background: black;
+  --jp-cell-editor-background: var(--jp-layout-color1);
+  --jp-cell-editor-border-color: var(--md-grey-800);
+  --jp-cell-editor-box-shadow: inset 0 0 2px var(--md-blue-300);
+  --jp-cell-editor-active-background: var(--jp-layout-color1);
   --jp-cell-editor-active-border-color: var(--jp-brand-color1);
 
   --jp-cell-prompt-width: 64px;
@@ -287,13 +265,9 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-cell-prompt-letter-spacing: 0px;
   --jp-cell-prompt-opacity: 1;
   --jp-cell-prompt-not-active-opacity: 0.5;
-  --jp-cell-prompt-not-active-font-color: var(--md-grey-700);
-  /* A custom blend of MD grey and blue 600
-   * See https://meyerweb.com/eric/tools/color-blend/#546E7A:1E88E5:5:hex */
-  --jp-cell-inprompt-font-color: #307fc1;
-  /* A custom blend of MD grey and orange 600
-   * https://meyerweb.com/eric/tools/color-blend/#546E7A:F4511E:5:hex */
-  --jp-cell-outprompt-font-color: #bf5b3d;
+  --jp-cell-prompt-not-active-font-color: var(--md-grey-200);
+  --jp-cell-inprompt-font-color: var(--jp-brand-color1);
+  --jp-cell-outprompt-font-color: #F39339;
 
   /* Notebook specific styles */
 
@@ -314,9 +288,9 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /* Rendermime styles */
 
-  --jp-rendermime-error-background: #fdd;
-  --jp-rendermime-table-row-background: var(--md-grey-100);
-  --jp-rendermime-table-row-hover-background: var(--md-light-blue-50);
+  --jp-rendermime-error-background: #571f20;
+  --jp-rendermime-table-row-background: var(--jp-layout-color1);
+  --jp-rendermime-table-row-hover-background: var(--jp-brand-color0);
 
   /* Dialog specific styles */
 
@@ -352,23 +326,23 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   /* Code mirror specific styles */
 
-  --jp-mirror-editor-keyword-color: #008000;
+  --jp-mirror-editor-keyword-color: #3cab44;
   --jp-mirror-editor-atom-color: #88f;
-  --jp-mirror-editor-number-color: #080;
-  --jp-mirror-editor-def-color: #00f;
-  --jp-mirror-editor-variable-color: white;
-  --jp-mirror-editor-variable-2-color: #05a;
-  --jp-mirror-editor-variable-3-color: #085;
-  --jp-mirror-editor-punctuation-color: #05a;
-  --jp-mirror-editor-property-color: #05a;
-  --jp-mirror-editor-operator-color: #aa22ff;
-  --jp-mirror-editor-comment-color: #408080;
-  --jp-mirror-editor-string-color: #ba2121;
-  --jp-mirror-editor-string-2-color: #708;
-  --jp-mirror-editor-meta-color: #aa22ff;
+  --jp-mirror-editor-number-color: #43be4b;
+  --jp-mirror-editor-def-color: #4d93ff;
+  --jp-mirror-editor-variable-color: #e9e9ea;  
+  --jp-mirror-editor-variable-2-color: var(--jp-brand-color3);
+  --jp-mirror-editor-variable-3-color: #F39339;
+  --jp-mirror-editor-punctuation-color: var(--jp-brand-color3);
+  --jp-mirror-editor-property-color: var(--jp-brand-color3);
+  --jp-mirror-editor-operator-color: #af24ff;
+  --jp-mirror-editor-comment-color: var(--jp-inverse-layout-color3);
+  --jp-mirror-editor-string-color: #ff7878;
+  --jp-mirror-editor-string-2-color: #F39339;
+  --jp-mirror-editor-meta-color: #B86cc6;
   --jp-mirror-editor-qualifier-color: #555;
-  --jp-mirror-editor-builtin-color: #008000;
-  --jp-mirror-editor-bracket-color: #997;
+  --jp-mirror-editor-builtin-color: #3cab44;
+  --jp-mirror-editor-bracket-color: #F39339;
   --jp-mirror-editor-tag-color: #170;
   --jp-mirror-editor-attribute-color: #00c;
   --jp-mirror-editor-header-color: blue;
@@ -376,7 +350,7 @@ all of MD as it is not optimized for dense, information rich UIs.
   --jp-mirror-editor-link-color: #00c;
   --jp-mirror-editor-error-color: #f00;
   --jp-mirror-editor-hr-color: #999;
-
+    
   /* Vega extension styles */
 
   --jp-vega-background: white;
